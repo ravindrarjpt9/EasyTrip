@@ -39,8 +39,7 @@
 	<!-- Added for auto-scanning of @Repository -->
 	<context:component-scan base-package="com.easymytrip.social.alpha.dao" />
 	
-	<!-- Added for auto-scanning of @Repository -->
-	<context:component-scan base-package="com.easymytrip.social.alpha.config" />
+
 
 <context:component-scan base-package="com.easymytrip.social.alpha.security" />
 	<!-- Data sources -->
