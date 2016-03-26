@@ -34,7 +34,10 @@
 	<context:component-scan base-package="com.easymytrip.social.alpha.config" />
 	<mvc:annotation-driven/> <!-- Required so swagger-springmvc can access spring's RequestMappingHandlerMapping  -->
 	
-	<bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />
+	
+	
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
 
 <bean id="InitializationController" class="com.easymytrip.social.alpha.controller.InitializationController" 
 		init-method="initIt" destroy-method="cleanUp">
@@ -98,29 +101,7 @@
 		</property>
 	</bean>
 	 -->
-<!--The<resources/> element tells Spring MVC which static resources need 
-		to be served independently from the dispatcher servlet. . The first makes 
-		sure that all files in the /css directory will be visible -->
-	<mvc:resources mapping="/css/**" location="/css/" />
-		
-		<mvc:resources  location="/resources/"  mapping="/resource/**"/>
-	<!-- The second allows displaying of all .html files in the application 
-		directory.
-		the /** symbol indicates the recursive look for any resource files underneath the base resource directory -->
-	<mvc:resources mapping="/*.html" location="/" />
 
-
-
-
-	<!-- Maps the JS and CSS resources' path in .jsp page to their physical location -->
-	<!-- 
-	<mvc:resources mapping="/resources/**" location="/resources/" />
-	 -->
-
-	<!-- Declares explicit support for annotation-driven MVC controllers (i.e. 
-		@RequestMapping, @Controller, etc.) as well as adding support for declarative 
-		validation via @Valid and message body marshalling with @RequestBody/ResponseBody. -->
-	<mvc:annotation-driven />
 
 	<!-- TODO -->
 	<bean

@@ -162,7 +162,7 @@ public class RegistrationController {
 
 	
 	@Transactional
-	@RequestMapping(value = "/hello",method = RequestMethod.GET,consumes = "text/plain" , produces = "text/plain")
+	@RequestMapping(value = "/hello",method = RequestMethod.GET)
 	public String getHello()
 	{
 		return "Hello Rest";

@@ -8,7 +8,7 @@
     
 
     <http use-expressions="true">
-        <intercept-url pattern="/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/emt/*" access="isAuthenticated()"/>
 <csrf disabled="true"/>
         <http-basic entry-point-ref="myBasicAuthenticationEntryPoint"/>
 
